@@ -5,7 +5,10 @@ import { sleep, check } from 'k6';
 
 export const options = {
   //quantidade de inteirações (no nosso exemlplo logins)
-  iterations: 50,
+  //iterations: 50,
+  // testando vus (usuários virtuais)
+  vus: 10,
+  duration: '30s',
   thresholds: {
     http_req_duration: ['p(90)<5', 'max<2'],
     http_req_failed: ['rate<0.01']
