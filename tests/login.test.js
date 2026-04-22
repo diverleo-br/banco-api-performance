@@ -2,6 +2,7 @@
 import http from 'k6/http';
 //usa o sleep parar por alguns segundos
 import { sleep, check } from 'k6';
+import { pegarBaseUrl } from '../utils/variaveis.js';
 
 const postLogin = JSON.parse(open('../fixtures/postLogin.json'))
 
@@ -33,7 +34,7 @@ export const options = {
 
 export default function () {
   //Teste é realizado aqui
-  const url = 'http://localhost:3000/login';
+  const url = pegarBaseUrl() +'/login';
 
   console.log(postLogin)
 
