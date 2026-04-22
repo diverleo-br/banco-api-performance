@@ -63,7 +63,7 @@ Para configurar e executar o projeto, siga os passos abaixo:
    - **Para usuários do Linux**:
      Siga a documentação do k6 para a instalação: https://k6.io/docs/getting-started/
 
-3. **Configure a variável de ambiente `BASE_URL`**:
+3. **Configure a variável de ambiente `"baseURL": "http://localhost:3000"`**:
 
    Crie um arquivo `.env` ou exporte diretamente no terminal a variável de ambiente que define a URL da API que será testada:
 
